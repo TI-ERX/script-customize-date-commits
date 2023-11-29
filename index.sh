@@ -18,17 +18,14 @@ _() {
     >README.md
   git add README.md
 
-  # Commit para os dias de janeiro e fevereiro
-  for MONTH in {01}
+  # Commits para os dias de janeiro
+  for DAY in 01 09 17 25
   do
-    for DAY in 01 09 17 25
-    do
-      echo "Content for ${YEAR}-${MONTH}-${DAY}" > "day${MONTH}_${DAY}.txt"
-      git add "day${MONTH}_${DAY}.txt"
-      GIT_AUTHOR_DATE="${YEAR}-${MONTH}-${DAY}T18:00:00" \
-        GIT_COMMITTER_DATE="${YEAR}-${MONTH}-${DAY}T18:00:00" \
-        git commit -m "Commit for ${YEAR}-${MONTH}-${DAY}"
-    done
+    echo "Content for ${YEAR}-01-${DAY}" > "day01_${DAY}.txt"
+    git add "day01_${DAY}.txt"
+    GIT_AUTHOR_DATE="${YEAR}-01-${DAY}T18:00:00" \
+      GIT_COMMITTER_DATE="${YEAR}-01-${DAY}T18:00:00" \
+      git commit -m "Commit for ${YEAR}-01-${DAY}"
   done
 
   git remote add origin "https://${ACCESS_TOKEN}@github.com/${USERNAME}/${YEAR}.git"
