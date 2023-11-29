@@ -19,7 +19,7 @@ _() {
   git add README.md
 
   # Commits para os dias de janeiro
-  for DAY in 01 09 17 25
+  for DAY in 02 03 04 05 06 07 08 10 11 12 13 14 15 16 18 19 20 21 22 23 24 26 27 28 29 30
   do
     echo "Content for ${YEAR}-01-${DAY}" > "day01_${DAY}.txt"
     git add "day01_${DAY}.txt"
